@@ -4,7 +4,7 @@
 #include<stdlib.h>
 
 int main(int argc, char** argv){
-	int size = 100; //supposed to test different ranges of sizes along with different step sizes
+	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
 	
 	int* arr = (int*)malloc(size*sizeof(int));
 	
@@ -28,4 +28,14 @@ int main(int argc, char** argv){
 	}*/
 	
 	return 0;
+}
+
+int mysearch(int* array, int start, int end){
+	for(int i = 0; i<size; i++){
+		if(array[i] == target){
+			return 1;
+		}
+	}
+	
+	return -1;
 }
