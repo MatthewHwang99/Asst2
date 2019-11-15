@@ -1,4 +1,5 @@
-all: searchtest
+all:
+	echo "Error: must make with 'proc' or 'thread'"
 
 proc: searchtest.c multitest_proc.o
 	gcc -std=c99 -g searchtest.c -o searchtest multitest_proc.o
