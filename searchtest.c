@@ -2,13 +2,13 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include"multitest.h"
+
 
 int main(int argc, char** argv){
 	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
-	
 	int* arr = (int*)malloc(size*sizeof(int));
-	
-	
+		
 	//generate list in sequence
 	for(int i = 0; i<size; i++){
 		arr[i] = i;
@@ -27,15 +27,28 @@ int main(int argc, char** argv){
 		printf("%d\n", arr[i]);
 	}*/
 	
+	search(arr, size);
+	
 	return 0;
 }
 
-int mysearch(int* array, int start, int end){
+/*int mysearch(int start, int end){ //returns the index where the target was found
 	for(int i = 0; i<size; i++){
 		if(array[i] == target){
-			return 1;
+			return i;
 		}
 	}
 	
-	return -1;
+	return -1; //if target not found in that range
+}*/
+
+void rescramble(int, int*, int);
+void rescramble(int prevIndex, int* arr, int size){
+	int r = rand() % size;
+	
+	int temp = arr[r];
+	arr[r] = arr[prevIndex];
+	arr[prevIndex] = temp;
+	
+	return;
 }

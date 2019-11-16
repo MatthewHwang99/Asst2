@@ -3,7 +3,7 @@
 #ifndef _multitest_h
 #define _multitest_h
 
-#define search(x) mysearch(int, int)
+int search(int*, int);
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -12,11 +12,11 @@
 #include<unistd.h>
 #include<sys/types.h>
 
-struct thread{
+/*struct thread{
 	pthread_t* th;
 	int retval; //index that the target was found, -1 if target wasn't found
 	int start; //starting index
 	int end; //ending index
-};
+};*/
 
 #endif
