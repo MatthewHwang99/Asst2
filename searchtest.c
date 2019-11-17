@@ -16,9 +16,9 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
+	int size = 20000; //supposed to test different ranges of sizes along with different step sizes
 	int* arr = (int*)malloc(size*sizeof(int));
-	int target;
+	int target = 14242;
 	
 	//generate list in sequence
 	for(int i = 0; i<size; i++){
@@ -35,10 +35,14 @@ int main(int argc, char** argv){
 	}
 	
 	/*for(int i = 0; i<size; i++){
-		printf("%d\n", arr[i]);
+		printf("%d, ", arr[i]);
 	}*/
 	
-	search(arr, size, target);
+	//running the test 3 times to see if rescramble works
+	for(int i = 0; i<3; i++){
+		int targetFound = search(arr, size, target);
+		rescramble(targetFound, arr, size);
+	}
 	
 	return 0;
 }
