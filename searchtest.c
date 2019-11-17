@@ -4,7 +4,6 @@
 #include"multitest.h"
 
 void rescramble(int, int*, int);
-int mysearch(int, int, int);
 
 void rescramble(int prevIndex, int* arr, int size){
 	int r = rand() % size;
@@ -14,17 +13,6 @@ void rescramble(int prevIndex, int* arr, int size){
 	arr[prevIndex] = temp;
 	
 	return;
-}
-
-
-int mysearch(int start, int end, int target){ //returns the index where the target was found
-	for(int i = 0; i<size; i++){
-		if(array[i] == target){
-			return i;
-		}
-	}
-	
-	return -1; //if target not found in that range
 }
 
 int main(int argc, char** argv){
