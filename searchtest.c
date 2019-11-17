@@ -8,7 +8,8 @@
 int main(int argc, char** argv){
 	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
 	int* arr = (int*)malloc(size*sizeof(int));
-		
+	int target;
+	
 	//generate list in sequence
 	for(int i = 0; i<size; i++){
 		arr[i] = i;
@@ -27,7 +28,7 @@ int main(int argc, char** argv){
 		printf("%d\n", arr[i]);
 	}*/
 	
-	search(arr, size);
+	search(arr, size, target);
 	
 	return 0;
 }
