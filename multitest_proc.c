@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 
-int procSearch(int *arr, int size, int numofProc, int index){
+int search(int *arr, int size, int numofProc, int index){
   //size refers to the size of the broken down initial array
   int i, result;
   for(i = 0; i < numofProc; i++){
