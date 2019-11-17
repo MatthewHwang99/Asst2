@@ -1,9 +1,31 @@
 // implements both multiprocess and multithread searches based on how it is built
-
 #include<stdio.h>
 #include<stdlib.h>
 #include"multitest.h"
 
+void rescramble(int, int*, int);
+int mysearch(int, int, int);
+
+void rescramble(int prevIndex, int* arr, int size){
+	int r = rand() % size;
+	
+	int temp = arr[r];
+	arr[r] = arr[prevIndex];
+	arr[prevIndex] = temp;
+	
+	return;
+}
+
+
+int mysearch(int start, int end, int target){ //returns the index where the target was found
+	for(int i = 0; i<size; i++){
+		if(array[i] == target){
+			return i;
+		}
+	}
+	
+	return -1; //if target not found in that range
+}
 
 int main(int argc, char** argv){
 	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
@@ -31,25 +53,4 @@ int main(int argc, char** argv){
 	search(arr, size, target);
 	
 	return 0;
-}
-
-/*int mysearch(int start, int end){ //returns the index where the target was found
-	for(int i = 0; i<size; i++){
-		if(array[i] == target){
-			return i;
-		}
-	}
-	
-	return -1; //if target not found in that range
-}*/
-
-void rescramble(int, int*, int);
-void rescramble(int prevIndex, int* arr, int size){
-	int r = rand() % size;
-	
-	int temp = arr[r];
-	arr[r] = arr[prevIndex];
-	arr[prevIndex] = temp;
-	
-	return;
 }
