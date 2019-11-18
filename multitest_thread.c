@@ -21,7 +21,7 @@ struct thread{
 
 int search(int* arr, int size, int target){
 	int numThreads;
-	int partitionSize = 250;
+	int partitionSize = 5;
 	
 	if(size < partitionSize){
 		numThreads = 1;
@@ -70,7 +70,7 @@ void* search_func(void* args){
 	int target = th->target;
 	int* array = th->array;
 	
-	for(int i = start; i<end; i++){
+	for(int i = start; i<=end; i++){
 		if(array[i] == target){
 			th->retval = i;
 			pthread_exit(NULL);

@@ -19,7 +19,7 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
- 	int size = 20000; //supposed to test different ranges of sizes along with different step sizes
+ 	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
 	int* arr = (int*)malloc(size*sizeof(int));
 	int target = 25;
 	srand(time(0));
@@ -46,18 +46,17 @@ int main(int argc, char** argv){
 	//unsigned long time2 = 0;
 	
 	//running the test 3 times to see if rescramble works
-	for(int i = 0; i<10; i++){
+	for(int i = 0; i<3; i++){
 		gettimeofday(&start, 0);
 		int targetFound = search(arr, size, target);
 		printf("Target %d found at index %d\n", target, targetFound);
 		gettimeofday(&end, 0);
-		
 		time += (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
 		
 		rescramble(targetFound, arr, size);
 	}
 	
-	time = time/10;
+	//time = time/3;
 	
 	/*for(int i = 0; i<10; i++){
 		gettimeofday(&start, 0);

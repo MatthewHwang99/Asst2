@@ -20,12 +20,13 @@ int linearSearch(int* arr, int size, int target){
 int search(int *arr, int size, int target){
   //size refers to the size of the initial array
   int i, result, numofProc;
-  if(size < 250){
+  int partitionSize = 5;
+  if(size < partitionSize){
     numofProc = 1;
-  }else if((size % 250) == 0){
-    numofProc = size / 250;
+  }else if((size % partitionSize) == 0){
+    numofProc = size / partitionSize;
   }else{
-    numofProc = size/250;
+    numofProc = size/partitionSize;
     numofProc++;
   }
   for(i = 0; i < numofProc; i++){
