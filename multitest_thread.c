@@ -21,28 +21,33 @@ struct thread{
 
 int search(int* arr, int size, int target){
 	int numThreads;
+	int partitionSize = 250;
 	
-	/*if(size % 250 == 0){
-		numThreads = size / 250;
-	}*/
-	
-	numThreads = size/250;
+	if(size < partitionSize){
+		numThreads = 1;
+	}else if(size%partitionSize==0){
+		numThreads = size/partitionSize;
+	}else{
+		numThreads = (size/partitionSize)+1;
+	}
 	
 	struct thread** arrThreads = (struct thread**)malloc(sizeof(struct thread*)*numThreads);
 	
 	int result = -1;
 	
-	for(int i = 0; i<numThreads; i++){
-		struct thread* th = (struct thread*)malloc(sizeof(struct thread));
-		pthread_t* thread_t = (pthread_t*)malloc(sizeof(pthread_t));
-		th->th = thread_t;
-		th->start = i*250;
-		th->end = i*250+249;
-		th->array = arr;
-		th->target = target;
-		pthread_create(thread_t, NULL, search_func, (void*)th);
-		arrThreads[i] = th;
-		//printf("Waiting for thread %d\n", i);
+	if(numThreads>1){
+		for(int i = 0; i<numThreads; i++){
+			struct thread* th = (struct thread*)malloc(sizeof(struct thread));
+			pthread_t* thread_t = (pthread_t*)malloc(sizeof(pthread_t));
+			th->th = thread_t;
+			th->start = i*partitionSize;
+			th->end = i*partitionSize+(partitionSize-1);
+			th->array = arr;
+			th->target = target;
+			pthread_create(thread_t, NULL, search_func, (void*)th);
+			arrThreads[i] = th;
+			//printf("Waiting for thread %d\n", i);
+		}
 	}
 	
 	for(int i = 0; i<numThreads; i++){
