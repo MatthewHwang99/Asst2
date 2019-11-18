@@ -5,7 +5,7 @@
 
 int search(int*, int, int);
 
-<<<<<<< HEAD
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -13,14 +13,6 @@ int search(int*, int, int);
 #include<pthread.h>
 #include<unistd.h>
 #include<sys/types.h>
-=======
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <pthread.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
->>>>>>> f9a5b6268714cde49aa52a754000bd257f7bdf15
+
 
 #endif
