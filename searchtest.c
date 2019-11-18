@@ -6,20 +6,19 @@
 void rescramble(int, int*, int);
 
 void rescramble(int prevIndex, int* arr, int size){
+  srand(time(0));
   int r = rand() % size;
-  
   int temp = arr[r];
   arr[r] = arr[prevIndex];
   arr[prevIndex] = temp;
-  
   return;
 }
 
 int main(int argc, char** argv){
   int size = 20000; //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
-  int target = 2;
-  
+  int target = 25;
+  srand(time(0));
   //generate list in sequence
   for(int i = 0; i<size; i++){
     arr[i] = i;
@@ -39,9 +38,9 @@ int main(int argc, char** argv){
 	}
   */
   //running the test 3 times to see if rescramble works
-  for(int i = 0; i<3; i++){
+  for(int i = 0; i<5; i++){
     int targetFound = search(arr, size, target);
-    //printf("%d\n", targetFound);
+    printf("Found target %d at index %d\n", target, targetFound);
     rescramble(targetFound, arr, size);
   }
   
