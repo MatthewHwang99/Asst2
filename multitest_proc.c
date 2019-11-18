@@ -5,14 +5,33 @@
 #include <time.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
-int search(int *arr, int size, int numofProc, int index){
-  //size refers to the size of the broken down initial array
-  int i, result;
+int linearSearch(int* arr, int size, int target){
+  int j;
+  for(j = 0; j < size; j++){
+    if(target == arr[j]){
+      return j;
+    }
+  }
+  return -1;
+}
+
+int search(int *arr, int size, int target){
+  //size refers to the size of the initial array
+  int i, result, numofProc;
+  if(size < 250){
+    numofProc = 1;
+  }else if((size % 250) == 0){
+    numofProc = size / 250;
+  }else{
+    numofProc = size/250;
+    numofProc++;
+  }
   for(i = 0; i < numofProc; i++){
     if(fork() == 0){
       //child process; search a portion of the array
-      exit(search());//actual search function, returns the index; -1 if not found
+      exit(linearSearch(&arr[(size/numofProc) * i], (size/numofProc), target));//actual search function, returns the index; -1 if not found
       //It will never return a value past 255 because of the 250 element array cap
     }else{
       wait(&result);
@@ -20,7 +39,8 @@ int search(int *arr, int size, int numofProc, int index){
 
     if(WEXITSTATUS(result) != 255){
       //Found the target
-      return WEXITSTATUS(result);
+      //printf("Found the target %d at index %d of iteration %d\n", target, WEXITSTATUS(result), i);
+      return ((i * (size/numofProc)) + WEXITSTATUS(result));
     }
   }
   //target not found
