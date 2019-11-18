@@ -38,10 +38,10 @@ int search(int* arr, int size, int target){
 		th->array = arr;
 		th->target = target;
 		pthread_create(&thread_t, NULL, search_func, (void*)th);
-		printf("Waiting for thread %d\n", i);
+		//printf("Waiting for thread %d\n", i);
 		pthread_join(thread_t, NULL);
 		if(th->retval != -1){
-			printf("Target(%d) found at: index %d in thread %d\n", target, th->retval, i);
+			//printf("Target(%d) found at: index %d in thread %d\n", target, th->retval, i);
 			return th->retval;
 		}
 	}

@@ -8,6 +8,7 @@ int search(int*, int, int);
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<sys/time.h>
 #include<pthread.h>
 #include<unistd.h>
 #include<sys/types.h>
