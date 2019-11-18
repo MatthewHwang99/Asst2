@@ -33,15 +33,17 @@ int main(int argc, char** argv){
 		arr[i] = arr[r];
 		arr[r] = temp;
 	}
-	
-	/*for(int i = 0; i<size; i++){
+	/*	
+	for(int i = 0; i<size; i++){
 		printf("%d, ", arr[i]);
-	}*/
-	
+	}
+	*/
 	//running the test 3 times to see if rescramble works
 	for(int i = 0; i<3; i++){
-		int targetFound = search(arr, size, target);
-		rescramble(targetFound, arr, size);
+	  int targetFound = search(arr, size, target);
+	  printf("%d\n", targetFound);
+	  rescramble(targetFound, arr, size);
+	  printf("i\n");
 	}
 	
 	return 0;
