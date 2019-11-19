@@ -73,17 +73,19 @@ int main(int argc, char** argv){
   struct timeval start, end;
   unsigned long time = 0;
   //unsigned long time2 = 0;
+  int numRuns = 20;
 
   //running the test 3 times to see if rescramble works
-  for(int i = 0; i<20; i++){
+  for(int i = 0; i<numRuns; i++){
     gettimeofday(&start, 0);
     int targetFound = (int)search(arr, size, target);
     printf("Target %d found at index %d\n", target, targetFound);
     gettimeofday(&end, 0);
     time += (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
     rescramble(targetFound, arr, size);
-  }
+ } 
 
+	unsigned long avgTime = time/numRuns;	
   //time = time/3;
   
   /*for(int i = 0; i<10; i++){
@@ -99,7 +101,7 @@ int main(int argc, char** argv){
     }*/
   
   
-  printf("Total run time: %lu microseconds.\n", time);
+  printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", time, avgTime);
 
   //printf("Total run time: %lu microseconds.\n", time2);
   
