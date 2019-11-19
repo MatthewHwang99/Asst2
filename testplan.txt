@@ -1,1 +1,5 @@
-Testplan
+Testplan:
+	Time vs. Size (Processes)
+	Time vs. Size (Threads)
+	     - Run 100 tests, starting at array size of 250 up to 25000
+	       - Get min, max, mean, std. dev

@@ -33,7 +33,7 @@ int main(int argc, char** argv){
 }*/
 
 int main(int argc, char** argv){
-  int size = 1000; //supposed to test different ranges of sizes along with different step sizes
+  int size = 250; //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
   srand(time(0));
@@ -73,19 +73,22 @@ int main(int argc, char** argv){
   struct timeval start, end;
   unsigned long time = 0;
   //unsigned long time2 = 0;
-  int numRuns = 20;
-
+  int numRuns = 100;
+  FILE *fp = fopen("resulttest.txt", "w");
   //running the test 3 times to see if rescramble works
-  for(int i = 0; i<numRuns; i++){
+  for(int i = 1; i<=numRuns; i++){
     gettimeofday(&start, 0);
-    int targetFound = (int)search(arr, size, target);
+    int targetFound = (int)search(arr, size*i, target);
     printf("Target %d found at index %d\n", target, targetFound);
     gettimeofday(&end, 0);
     time += (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
+    fprintf(fp,"Size of array: %d Time: %lu\n" , i*size, time);
     rescramble(targetFound, arr, size);
- } 
-
-	unsigned long avgTime = time/numRuns;	
+  } 
+  
+  unsigned long avgTime = time/numRuns;	
+  fprintf(fp, "Average Time %lu\n", avgTime);
+  fclose(fp);
   //time = time/3;
   
   /*for(int i = 0; i<10; i++){
@@ -102,7 +105,7 @@ int main(int argc, char** argv){
   
   
   printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", time, avgTime);
-
+  
   //printf("Total run time: %lu microseconds.\n", time2);
   
   return 0;
