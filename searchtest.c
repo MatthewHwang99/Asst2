@@ -6,7 +6,7 @@
 void rescramble(int, int*, int);
 
 void rescramble(int prevIndex, int* arr, int size){
-<<<<<<< HEAD
+  //<<<<<<< HEAD
 	int r = rand()%size;
 	while(r==prevIndex){
 		r = rand() % size;
@@ -25,7 +25,7 @@ int main(int argc, char** argv){
 	int target = 2500;
 	
 	//generate list in sequence
-=======
+	//=======
   srand(time(0));
   int r = rand() % size;
   int temp = arr[r];
@@ -107,8 +107,8 @@ int main(int argc, char** argv){
 	//printf("Total run time: %lu microseconds.\n", time2);
 	
 	return 0;
-=======
-  */
+	//=======
+	//*/
   //running the test 3 times to see if rescramble works
   for(int i = 0; i<5; i++){
     int targetFound = search(arr, size, target);
@@ -117,5 +117,5 @@ int main(int argc, char** argv){
   }
   
   return 0;
->>>>>>> f9a5b6268714cde49aa52a754000bd257f7bdf15
+  //>>>>>>> f9a5b6268714cde49aa52a754000bd257f7bdf15
 }
