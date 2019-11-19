@@ -12,5 +12,4 @@ thread: searchtest.c multitest_thread.c multitest.h
 
 clean:
 	rm -rf searchtest
-	rm -rf multitest_thread.o
-	rm -rf multitest_proc.o
+	rm -rf multitest.o

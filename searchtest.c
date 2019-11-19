@@ -6,7 +6,10 @@
 void rescramble(int, int*, int);
 
 void rescramble(int prevIndex, int* arr, int size){
+<<<<<<< HEAD
   //<<<<<<< HEAD
+=======
+>>>>>>> f196209bf7eaca019a7cf85e5834c423e38a66e1
 	int r = rand()%size;
 	while(r==prevIndex){
 		r = rand() % size;
@@ -20,11 +23,12 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-	int size = 20000; //supposed to test different ranges of sizes along with different step sizes
+ 	int size = 1000; //supposed to test different ranges of sizes along with different step sizes
 	int* arr = (int*)malloc(size*sizeof(int));
-	int target = 2500;
-	
+	int target = 25;
+	srand(time(0));
 	//generate list in sequence
+<<<<<<< HEAD
 	//=======
   srand(time(0));
   int r = rand() % size;
@@ -58,6 +62,11 @@ int main(int argc, char** argv){
 	printf("%d, ", arr[i]);
 	}
 <<<<<<< HEAD
+=======
+  	for(int i = 0; i<size; i++){
+    	arr[i] = i;
+  	}
+>>>>>>> f196209bf7eaca019a7cf85e5834c423e38a66e1
 	
 	int r; int temp;
 	//scramble list
@@ -77,18 +86,17 @@ int main(int argc, char** argv){
 	//unsigned long time2 = 0;
 	
 	//running the test 3 times to see if rescramble works
-	for(int i = 0; i<10; i++){
+	for(int i = 0; i<3; i++){
 		gettimeofday(&start, 0);
 		int targetFound = search(arr, size, target);
 		printf("Target %d found at index %d\n", target, targetFound);
 		gettimeofday(&end, 0);
-		
 		time += (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
 		
 		rescramble(targetFound, arr, size);
 	}
 	
-	time = time/10;
+	//time = time/3;
 	
 	/*for(int i = 0; i<10; i++){
 		gettimeofday(&start, 0);
@@ -107,6 +115,7 @@ int main(int argc, char** argv){
 	//printf("Total run time: %lu microseconds.\n", time2);
 	
 	return 0;
+<<<<<<< HEAD
 	//=======
 	//*/
   //running the test 3 times to see if rescramble works
@@ -118,4 +127,6 @@ int main(int argc, char** argv){
   
   return 0;
   //>>>>>>> f9a5b6268714cde49aa52a754000bd257f7bdf15
+=======
+>>>>>>> f196209bf7eaca019a7cf85e5834c423e38a66e1
 }
