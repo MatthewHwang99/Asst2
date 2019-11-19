@@ -9,6 +9,8 @@
 #include<sys/types.h>
 #include<time.h>
 
+int info = 0;
+
 void* search_func(void*);
 struct thread{
 	pthread_t* th;
@@ -21,7 +23,7 @@ struct thread{
 
 int search(int* arr, int size, int target){
 	int numThreads;
-	int partitionSize = 5;
+	int partitionSize = 50;
 	
 	if(size < partitionSize){
 		numThreads = 1;
@@ -29,6 +31,11 @@ int search(int* arr, int size, int target){
 		numThreads = size/partitionSize;
 	}else{
 		numThreads = (size/partitionSize)+1;
+	}
+	
+	if(info == 0){
+		printf("Breaking the array into partitions of %d, using %d threads.\n", partitionSize, numThreads);
+		info = 1;
 	}
 	
 	struct thread** arrThreads = (struct thread**)malloc(sizeof(struct thread*)*numThreads);
