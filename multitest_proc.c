@@ -34,15 +34,28 @@ int search(int *arr, int size, int target){
       //actual search function, returns the index; -1 if not found
       exit(linearSearch(&arr[(size/numofProc) * i], (size/numofProc), target));
       //It will never return a value past 255 because of the 250 element array cap
-    }else{
+    }/*else{
+      //Don't have parent wait for each child, have the above loop run n times and then have another loop after having the parent wait n times for exits
       wait(&result);
     }
-    
+     */
+    int j;
+    for(j = 0; j < numofProc; j++){
+      wait(&result);
+      
+      if(WEXITSTATUS(result) != 255){
+	//Found the target
+	//printf("Found the target %d at index %d of iteration %d\n", target, WEXITSTATUS(result), i);
+	return ((i * (size/numofProc)) + WEXITSTATUS(result));
+      }
+    }
+    /*
     if(WEXITSTATUS(result) != 255){
       //Found the target
       //printf("Found the target %d at index %d of iteration %d\n", target, WEXITSTATUS(result), i);
       return ((i * (size/numofProc)) + WEXITSTATUS(result));
     }
+    */
   }
   //target not found
   return -1;

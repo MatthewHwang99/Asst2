@@ -20,7 +20,7 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-  int size = 500; //supposed to test different ranges of sizes along with different step sizes
+  int size = 956; //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
   srand(time(0));
@@ -81,11 +81,12 @@ int main(int argc, char** argv){
   /**********************/
   fprintf(fp, "Average Time %lu\n", avgTime);
   fprintf(fp, "Min: %lu\nMax: %lu\n", min, max);
-  fprintf(fp, "Std. Dev: %lu\n", runningsum);
-  fclose(fp); 
+  fprintf(fp, "Std. Dev: %lu\n", runningsum); 
   printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", sum, avgTime);
   printf("Minimum time: %lu\nMaximum time: %lu\n", min, max);
   printf("Standard Deviation: %lu\n", runningsum);
-  free(arr);
+  //  free(arr);
+  //  free(timearr);
+  fclose(fp);
   return 0;
 }

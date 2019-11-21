@@ -1,4 +1,4 @@
-Average Time 169
-Min: 94
-Max: 1837
-Std. Dev: 207
+Average Time 235
+Min: 87
+Max: 411
+Std. Dev: 110
