@@ -50,8 +50,8 @@ int main(int argc, char** argv){
   for(int i = 1; i<=numRuns; i++){
     gettimeofday(&start, 0);
     int targetFound = (int)search(arr, size, target);
-    printf("Target %d found at index %d\n", target, targetFound);
-    fprintf(fp, "Target %d found at index %d\n", target, targetFound);
+    //printf("Target %d found at index %d\n", target, targetFound);
+    //fprintf(fp, "Target %d found at index %d\n", target, targetFound);
     gettimeofday(&end, 0);
     time = (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
     timearr[(i-1)] = time;
@@ -86,5 +86,6 @@ int main(int argc, char** argv){
   printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", sum, avgTime);
   printf("Minimum time: %lu\nMaximum time: %lu\n", min, max);
   printf("Standard Deviation: %lu\n", runningsum);
+  free(arr);
   return 0;
 }
