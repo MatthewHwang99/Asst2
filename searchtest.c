@@ -20,10 +20,10 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-	if(argc!=2){
-		printf("Error: Please input array size.\n");
-	}
-	
+  if(argc!=2){
+    printf("Error: Please input array size.\n");
+  }
+  
   int size = atoi(argv[1]); //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
@@ -48,7 +48,7 @@ int main(int argc, char** argv){
   int numRuns = 100;
   unsigned long min = 0, max = 0;
   unsigned long sum = 0;
-  FILE *fp = fopen("resulttest.txt", "w");
+  FILE *fp = fopen("resulttest.txt", "a");
   unsigned long timearr[numRuns];
 
   for(int i = 1; i<=numRuns; i++){
@@ -83,9 +83,10 @@ int main(int argc, char** argv){
   runningsum /= (numRuns-1);
   runningsum = sqrt((double)runningsum);
   /**********************/
+  fprintf(fp, "Size of array: %d\n", size);
   fprintf(fp, "Average Time %lu\n", avgTime);
   fprintf(fp, "Min: %lu\nMax: %lu\n", min, max);
-  fprintf(fp, "Std. Dev: %lu\n", runningsum); 
+  fprintf(fp, "Std. Dev: %lu\n\n", runningsum); 
   printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", sum, avgTime);
   printf("Minimum time: %lu\nMaximum time: %lu\n", min, max);
   printf("Standard Deviation: %lu\n", runningsum);
