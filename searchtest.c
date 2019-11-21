@@ -1,6 +1,7 @@
 // implements both multiprocess and multithread searches based on how it is built
 #include<stdio.h>
 #include<stdlib.h>
+#include <math.h>
 #include"multitest.h"
 
 void rescramble(int, int*, int);
@@ -19,7 +20,7 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-  int size = 20000; //supposed to test different ranges of sizes along with different step sizes
+  int size = 500; //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
   srand(time(0));
@@ -41,22 +42,49 @@ int main(int argc, char** argv){
   unsigned long time = 0;
   //unsigned long time2 = 0;
   int numRuns = 100;
+  unsigned long min = 0, max = 0;
+  unsigned long sum = 0;
   FILE *fp = fopen("resulttest.txt", "w");
+  unsigned long timearr[numRuns];
 
   for(int i = 1; i<=numRuns; i++){
     gettimeofday(&start, 0);
     int targetFound = (int)search(arr, size, target);
     printf("Target %d found at index %d\n", target, targetFound);
+    fprintf(fp, "Target %d found at index %d\n", target, targetFound);
     gettimeofday(&end, 0);
-    time += (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
-    fprintf(fp,"Size of array: %d Time: %lu\n" , i*size, time);
+    time = (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
+    timearr[(i-1)] = time;
+    /*Calculate min and max*/
+    if(min == 0 && max == 0){
+      min = time;
+      max = time;
+    }
+    if(time < min){
+      min = time;
+    }else if(time > max){
+      max = time;
+    }
+    /*********************/
+    sum += time;
+    //fprintf(fp,"Size of array: %d Time it took: %lu\n", size, time);
     rescramble(targetFound, arr, size);
   } 
-  
-  unsigned long avgTime = time/numRuns;	
+  unsigned long avgTime = sum/numRuns;
+  /**Calculate Std. Dev**/
+  unsigned long runningsum = 0;
+  for(int i = 0; i < numRuns; i++){
+    runningsum += ((timearr[i] - avgTime) * (timearr[i] - avgTime));
+  }
+  runningsum /= (numRuns-1);
+  runningsum = sqrt((double)runningsum);
+  /**********************/
   fprintf(fp, "Average Time %lu\n", avgTime);
+  fprintf(fp, "Min: %lu\nMax: %lu\n", min, max);
+  fprintf(fp, "Std. Dev: %lu\n", runningsum);
   fclose(fp); 
-  printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", time, avgTime);
-
+  printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", sum, avgTime);
+  printf("Minimum time: %lu\nMaximum time: %lu\n", min, max);
+  printf("Standard Deviation: %lu\n", runningsum);
   return 0;
 }

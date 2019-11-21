@@ -13,6 +13,6 @@ int search(int*, int, int);
 #include<pthread.h>
 #include<unistd.h>
 #include<sys/types.h>
-
+#include<math.h>
 
 #endif
