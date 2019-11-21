@@ -20,7 +20,11 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-  int size = 956; //supposed to test different ranges of sizes along with different step sizes
+	if(argc!=2){
+		printf("Error: Please input array size.\n");
+	}
+	
+  int size = atoi(argv[1]); //supposed to test different ranges of sizes along with different step sizes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
   srand(time(0));
