@@ -51,7 +51,6 @@ int main(int argc, char** argv){
   unsigned long min = 0, max = 0;
   unsigned long sum = 0;
   
-  FILE *fp = fopen("resulttest.txt", "w");
   FILE *fp = fopen("resulttest.txt", "a");
 
   unsigned long timearr[numRuns];
@@ -92,14 +91,16 @@ int main(int argc, char** argv){
   runningsum = sqrt((double)runningsum);
   /**********************/
   fprintf(fp, "Size of array: %d\n", size);
+  fprintf(fp, "Number of Threads/Procs: %d\n", num);
   fprintf(fp, "Average Time %lu\n", avgTime);
   fprintf(fp, "Min: %lu\nMax: %lu\n", min, max);
   fprintf(fp, "Std. Dev: %lu\n\n", runningsum); 
-  printf("Total run time: %lu microseconds.\nAverage time per search: %lu microseconds.\n", sum, avgTime);
+  //printf("Total run time: %lu microseconds.\n",  sum);
+  printf("Average time per search: %lu microseconds.\n", avgTime);
   printf("Minimum time: %lu\nMaximum time: %lu\n", min, max);
   printf("Standard Deviation: %lu\n", runningsum);
-  //  free(arr);
-  //  free(timearr);
+  //free(arr);
+  //free(timearr);
   fclose(fp);
   return 0;
 }
