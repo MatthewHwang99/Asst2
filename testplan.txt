@@ -7,7 +7,7 @@ For example:
 
 If the inputted array size and number of threads/processes gives a partition size of over 250 for each thread/process, an error is thrown and the user is asked to input different arguments.
 
-For all our tests, we decided to run each search 100 times, getting the average (mean) time for each search, keeping track of the min (smallest amount of time) and max of all iterations, and then calculating the standard deviation.
+For all our tests, we decided to run each search 100 times, getting the average (mean) time for each search, keeping track of the min (smallest amount of time) and max of all iterations, and then calculating the standard deviation. Also, all the times measured are measured in microseconds.
 
 Tests:
 
