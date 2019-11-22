@@ -1,5 +1,58 @@
 Testplan:
-	Time vs. Size (Processes)
-	Time vs. Size (Threads)
-	     - Run 100 tests, starting at array size of 250 up to 25000
-	       - Get min, max, mean, std. dev
+
+	For this assignment, we decided to have the program take in 2 additional arguments when running ./searchtest. The first argument is the array size and the second argument is the number of threads/procs that the user wants. To run threads or processes, we had a variable make ('make thread' or 'make proc') that throws an error if a target is not specified. For our search algorithm, we just used linear search. 
+	
+For example:
+./searchtest 1000 4 => runs searchtest with an array of size 1000, calling search and creating 4 threads or processes (1000/250) with partitions of size 250.
+
+If the inputted array size and number of threads/processes gives a partition size of over 250 for each thread/process, an error is thrown and the user is asked to input different arguments.
+
+For all our tests, we decided to run each search 100 times, getting the average (mean) time for each search, keeping track of the min (smallest amount of time) and max of all iterations, and then calculating the standard deviation.
+
+Tests:
+
+	Test1: Average Time vs. Different Array Sizes
+	
+	First, we found the average times each search takes for threads and processes based on different array sizes with the same partition sizes. The partition size is the max each time (250). We ran 22 tests in total, starting from array size 100 to size 20,000. {100, 500, 1000, 2000, ... , 20000}
+	
+	For example: (for proc)
+	./searchtest 2000 8
+	
+	Outputs: Size of array: 2000
+		     Average Time: 925
+             Min: 91
+             Max: 4797
+             Std. Dev: 878
+
+	We retrieved the average time, min, max, and standard deviations for each test (compiled over 100 iterations) and then graphed the Average Time vs. Array Sizes
+
+	
+	Test 2: Average Time vs. Different Number of Threads/Processes
+	
+	For the second test, we found the average times each it took for each thread/process based on changing the number of threads and processes, and therefore, having different partition sizes. We did this by keeping the array size 1,000 for each test. {4, 5, 10, 12, 13, 15, 17, 20, 25, 33, 50, 100, 200}
+	
+	For example: (for proc)
+	./searchtest 1000 10
+	
+	Outputs: Number of Threads/Procs: 10
+			 Average Time: 569
+			 Min: 95
+			 Max: 1056
+			 Std. Dev: 303
+
+	We retrieved the average time, min, max, and standard deviations for each test (compiled over 100 iterations) and then graphed the Average Time vs. Number of Threads/Procs
+	
+	Test 3: Error Cases
+		
+	Partition size greater than 250
+		./searchtest 1000 2
+		Error: Partition size is greater than 250. Need more threads/processes.
+		
+	Array size less than 1
+		./searchtest 0 5
+		Error: Please input an array size that is greater than 0.
+		
+	Make targets
+		'make'
+		Error: must make with 'proc' or 'thread'
+

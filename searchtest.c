@@ -26,6 +26,11 @@ int main(int argc, char** argv){
 	}
 	
   int size = atoi(argv[1]); //supposed to test different ranges of sizes along with different step sizes
+  if(size < 1){
+  	printf("Error: Please input an array size that is greater than 0.\n");
+  	return 0;
+  }
+  
   int num = atoi(argv[2]); //number of threads/processes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;

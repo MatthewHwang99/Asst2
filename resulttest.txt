@@ -494,3 +494,1046 @@ Min: 932
 Max: 6593
 Std. Dev: 562
 
+Size of array: 500
+Number of Threads/Procs: 10
+Average Time 149
+Min: 109
+Max: 435
+Std. Dev: 46
+
+Size of array: 50000
+Number of Threads/Procs: 5000
+Average Time 90704
+Min: 85955
+Max: 128155
+Std. Dev: 5552
+
+Size of array: 20000
+Number of Threads/Procs: 2000
+Average Time 34354
+Min: 32607
+Max: 41253
+Std. Dev: 1444
+
+Size of array: 20000
+Number of Threads/Procs: 1000
+Average Time 378149
+Min: 5728
+Max: 720857
+Std. Dev: 197598
+
+Size of array: 20000
+Number of Threads/Procs: 1000
+Average Time 17830
+Min: 15862
+Max: 48184
+Std. Dev: 3361
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 257
+Min: 215
+Max: 905
+Std. Dev: 70
+
+Size of array: 250
+Number of Threads/Procs: 1
+Average Time 137
+Min: 105
+Max: 327
+Std. Dev: 35
+
+Size of array: 5000
+Number of Threads/Procs: 5000
+Average Time 88862
+Min: 84775
+Max: 109602
+Std. Dev: 4238
+
+Size of array: 500
+Number of Threads/Procs: 50
+Average Time 4351
+Min: 218
+Max: 27439
+Std. Dev: 4579
+
+Size of array: 20000
+Number of Threads/Procs: 320
+Average Time 53279
+Min: 818
+Max: 115997
+Std. Dev: 29181
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 104475
+Min: 136
+Max: 208244
+Std. Dev: 57206
+
+Size of array: 20000
+Number of Threads/Procs: 400
+Average Time 69155
+Min: 524
+Max: 157389
+Std. Dev: 43342
+
+Size of array: 20000
+Number of Threads/Procs: 450
+Average Time 81840
+Min: 4332
+Max: 198642
+Std. Dev: 50333
+
+Size of array: 100000
+Number of Threads/Procs: 10000
+Average Time 183483
+Min: 174509
+Max: 216222
+Std. Dev: 8829
+
+Size of array: 1000
+Number of Threads/Procs: 1000
+Average Time 354817
+Min: 12619
+Max: 793927
+Std. Dev: 215843
+
+Size of array: 500000
+Number of Threads/Procs: 20000
+Average Time 370978
+Min: 355031
+Max: 466561
+Std. Dev: 15780
+
+Size of array: 250
+Number of Threads/Procs: 1
+Average Time 119
+Min: 92
+Max: 257
+Std. Dev: 32
+
+Size of array: 1000
+Number of Threads/Procs: 4
+Average Time 52
+Min: 39
+Max: 657
+Std. Dev: 61
+
+Size of array: 1000
+Number of Threads/Procs: 4
+Average Time 94
+Min: 63
+Max: 604
+Std. Dev: 53
+
+Size of array: 1000
+Number of Threads/Procs: 20
+Average Time 266
+Min: 230
+Max: 663
+Std. Dev: 61
+
+Size of array: 1000
+Number of Threads/Procs: 20
+Average Time 612
+Min: 260
+Max: 2642
+Std. Dev: 377
+
+Size of array: 1000
+Number of Threads/Procs: 20
+Average Time 254
+Min: 214
+Max: 963
+Std. Dev: 75
+
+Size of array: 1000
+Number of Threads/Procs: 20
+Average Time 364
+Min: 278
+Max: 810
+Std. Dev: 61
+
+Size of array: 500
+Number of Threads/Procs: 25
+Average Time 642
+Min: 294
+Max: 3599
+Std. Dev: 466
+
+Size of array: 500
+Number of Threads/Procs: 25
+Average Time 629
+Min: 280
+Max: 3085
+Std. Dev: 453
+
+Size of array: 500
+Number of Threads/Procs: 25
+Average Time 610
+Min: 278
+Max: 3166
+Std. Dev: 435
+
+Size of array: 250
+Number of Threads/Procs: 25
+Average Time 370
+Min: 270
+Max: 3518
+Std. Dev: 359
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 177
+Min: 98
+Max: 2681
+Std. Dev: 277
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 176
+Min: 99
+Max: 2337
+Std. Dev: 248
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 445
+Min: 213
+Max: 2580
+Std. Dev: 237
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 120
+Min: 106
+Max: 608
+Std. Dev: 50
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 484
+Min: 349
+Max: 2606
+Std. Dev: 220
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 179
+Min: 100
+Max: 2198
+Std. Dev: 238
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 156
+Min: 129
+Max: 786
+Std. Dev: 64
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 178
+Min: 94
+Max: 2449
+Std. Dev: 261
+
+Size of array: 250
+Number of Threads/Procs: 10
+Average Time 448
+Min: 239
+Max: 2208
+Std. Dev: 205
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 151
+Min: 72
+Max: 2153
+Std. Dev: 228
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 150
+Min: 70
+Max: 2439
+Std. Dev: 253
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 149
+Min: 73
+Max: 1845
+Std. Dev: 200
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 143
+Min: 74
+Max: 1576
+Std. Dev: 172
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 334
+Min: 168
+Max: 1675
+Std. Dev: 153
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 115
+Min: 78
+Max: 1057
+Std. Dev: 97
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 396
+Min: 303
+Max: 1877
+Std. Dev: 156
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 147
+Min: 72
+Max: 2016
+Std. Dev: 218
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 85
+Min: 64
+Max: 483
+Std. Dev: 40
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 348
+Min: 260
+Max: 1907
+Std. Dev: 162
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 132
+Min: 60
+Max: 1789
+Std. Dev: 192
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 133
+Min: 62
+Max: 1470
+Std. Dev: 160
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 332
+Min: 195
+Max: 1839
+Std. Dev: 159
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 81
+Min: 70
+Max: 471
+Std. Dev: 39
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 323
+Min: 195
+Max: 1621
+Std. Dev: 139
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 364
+Min: 263
+Max: 1720
+Std. Dev: 145
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 329
+Min: 175
+Max: 1634
+Std. Dev: 144
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 132
+Min: 62
+Max: 1538
+Std. Dev: 171
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 339
+Min: 167
+Max: 1655
+Std. Dev: 145
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 327
+Min: 195
+Max: 1993
+Std. Dev: 175
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 273
+Min: 134
+Max: 1985
+Std. Dev: 207
+
+Size of array: 250
+Number of Threads/Procs: 7
+Average Time 363
+Min: 225
+Max: 2036
+Std. Dev: 177
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 146
+Min: 74
+Max: 1841
+Std. Dev: 201
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 406
+Min: 207
+Max: 1823
+Std. Dev: 155
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 361
+Min: 174
+Max: 1882
+Std. Dev: 168
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 97
+Min: 83
+Max: 635
+Std. Dev: 55
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 363
+Min: 221
+Max: 1651
+Std. Dev: 144
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 356
+Min: 156
+Max: 1817
+Std. Dev: 169
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 97
+Min: 82
+Max: 583
+Std. Dev: 49
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 120
+Min: 81
+Max: 911
+Std. Dev: 81
+
+Size of array: 250
+Number of Threads/Procs: 8
+Average Time 371
+Min: 221
+Max: 1701
+Std. Dev: 147
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 1923
+Min: 222
+Max: 5393
+Std. Dev: 1306
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 644
+Min: 105
+Max: 3519
+Std. Dev: 510
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 480
+Min: 95
+Max: 1246
+Std. Dev: 258
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 520
+Min: 91
+Max: 1278
+Std. Dev: 264
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 1405
+Min: 99
+Max: 4747
+Std. Dev: 1150
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 1502
+Min: 116
+Max: 4237
+Std. Dev: 1169
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 1772
+Min: 156
+Max: 9320
+Std. Dev: 1631
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 643
+Min: 110
+Max: 1677
+Std. Dev: 362
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 450
+Min: 92
+Max: 1015
+Std. Dev: 224
+
+Size of array: 800
+Number of Threads/Procs: 8
+Average Time 1032
+Min: 93
+Max: 4396
+Std. Dev: 945
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1052
+Min: 798
+Max: 2250
+Std. Dev: 307
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1120
+Min: 760
+Max: 6087
+Std. Dev: 802
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1236
+Min: 828
+Max: 5312
+Std. Dev: 827
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1259
+Min: 788
+Max: 5572
+Std. Dev: 884
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1187
+Min: 761
+Max: 6017
+Std. Dev: 846
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1041
+Min: 793
+Max: 1877
+Std. Dev: 195
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1189
+Min: 775
+Max: 6033
+Std. Dev: 827
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 884
+Min: 754
+Max: 1598
+Std. Dev: 137
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 1174
+Min: 772
+Max: 5930
+Std. Dev: 806
+
+Size of array: 1000
+Number of Threads/Procs: 64
+Average Time 2570
+Min: 1016
+Max: 7297
+Std. Dev: 1096
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1196
+Min: 95
+Max: 5642
+Std. Dev: 1254
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1722
+Min: 193
+Max: 6056
+Std. Dev: 1229
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 577
+Min: 99
+Max: 1304
+Std. Dev: 315
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1568
+Min: 93
+Max: 5400
+Std. Dev: 1329
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1097
+Min: 96
+Max: 5800
+Std. Dev: 1238
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 2140
+Min: 203
+Max: 6187
+Std. Dev: 1570
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1256
+Min: 183
+Max: 3145
+Std. Dev: 725
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 3033
+Min: 365
+Max: 6086
+Std. Dev: 1506
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 729
+Min: 98
+Max: 2101
+Std. Dev: 464
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1364
+Min: 93
+Max: 5312
+Std. Dev: 1231
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 1575
+Min: 188
+Max: 5645
+Std. Dev: 1286
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 171
+Min: 99
+Max: 2028
+Std. Dev: 222
+
+Size of array: 1000
+Number of Threads/Procs: 10
+Average Time 143
+Min: 95
+Max: 1078
+Std. Dev: 100
+
+Size of array: 1000
+Number of Threads/Procs: 80
+Average Time 1177
+Min: 952
+Max: 3938
+Std. Dev: 342
+
+Size of array: 1000
+Number of Threads/Procs: 80
+Average Time 1148
+Min: 950
+Max: 6430
+Std. Dev: 553
+
+Size of array: 1000
+Number of Threads/Procs: 80
+Average Time 1455
+Min: 1001
+Max: 6603
+Std. Dev: 961
+
+Size of array: 10000
+Number of Threads/Procs: 200
+Average Time 26013
+Min: 754
+Max: 66293
+Std. Dev: 13528
+
+Size of array: 10000
+Number of Threads/Procs: 200
+Average Time 32906
+Min: 499
+Max: 174422
+Std. Dev: 23346
+
+Size of array: 10000
+Number of Threads/Procs: 200
+Average Time 25025
+Min: 305
+Max: 184655
+Std. Dev: 25529
+
+Size of array: 10000
+Number of Threads/Procs: 200
+Average Time 26321
+Min: 422
+Max: 54687
+Std. Dev: 14371
+
+Size of array: 10000
+Number of Threads/Procs: 200
+Average Time 23572
+Min: 523
+Max: 51170
+Std. Dev: 13088
+
+Size of array: 10000
+Number of Threads/Procs: 1600
+Average Time 28812
+Min: 26872
+Max: 48197
+Std. Dev: 2320
+
+Size of array: 10000
+Number of Threads/Procs: 1600
+Average Time 29517
+Min: 26974
+Max: 45465
+Std. Dev: 2065
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 111156
+Min: 3559
+Max: 223669
+Std. Dev: 61308
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 113915
+Min: 2163
+Max: 206448
+Std. Dev: 56577
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 105461
+Min: 998
+Max: 211638
+Std. Dev: 56953
+
+Size of array: 20000
+Number of Threads/Procs: 4000
+Average Time 73973
+Min: 71039
+Max: 83333
+Std. Dev: 1603
+
+Size of array: 20000
+Number of Threads/Procs: 4000
+Average Time 74462
+Min: 71773
+Max: 113567
+Std. Dev: 4361
+
+Size of array: 20000
+Number of Threads/Procs: 4000
+Average Time 74112
+Min: 70744
+Max: 111096
+Std. Dev: 4136
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 109608
+Min: 1735
+Max: 208628
+Std. Dev: 65865
+
+Size of array: 20000
+Number of Threads/Procs: 500
+Average Time 113210
+Min: 1834
+Max: 240385
+Std. Dev: 59671
+
+Size of array: 40000
+Number of Threads/Procs: 500
+Average Time 101894
+Min: 169
+Max: 229080
+Std. Dev: 61202
+
+Size of array: 40000
+Number of Threads/Procs: 500
+Average Time 105538
+Min: 2210
+Max: 206571
+Std. Dev: 60698
+
+Size of array: 40000
+Number of Threads/Procs: 500
+Average Time 109759
+Min: 517
+Max: 217701
+Std. Dev: 61546
+
+Size of array: 40000
+Number of Threads/Procs: 4000
+Average Time 73894
+Min: 69871
+Max: 98347
+Std. Dev: 3489
+
+Size of array: 40000
+Number of Threads/Procs: 4000
+Average Time 75171
+Min: 70144
+Max: 107896
+Std. Dev: 5986
+
+Size of array: 5000
+Number of Threads/Procs: 50
+Average Time 996
+Min: 579
+Max: 5224
+Std. Dev: 740
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 602
+Min: 250
+Max: 2901
+Std. Dev: 377
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 585
+Min: 255
+Max: 3290
+Std. Dev: 401
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 502
+Min: 231
+Max: 3365
+Std. Dev: 413
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 304
+Min: 220
+Max: 1389
+Std. Dev: 125
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 526
+Min: 230
+Max: 3051
+Std. Dev: 410
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 595
+Min: 233
+Max: 2954
+Std. Dev: 448
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 572
+Min: 253
+Max: 2999
+Std. Dev: 385
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 243
+Min: 218
+Max: 789
+Std. Dev: 57
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 680
+Min: 261
+Max: 4777
+Std. Dev: 585
+
+Size of array: 5000
+Number of Threads/Procs: 20
+Average Time 295
+Min: 214
+Max: 3154
+Std. Dev: 327
+
+Size of array: 1000
+Number of Threads/Procs: 20
+Average Time 3375
+Min: 122
+Max: 9833
+Std. Dev: 2483
+
+Size of array: 1000
+Number of Threads/Procs: 250
+Average Time 38491
+Min: 836
+Max: 84870
+Std. Dev: 21895
+
+Size of array: 100
+Number of Threads/Procs: 25
+Average Time 5249
+Min: 322
+Max: 12218
+Std. Dev: 3317
+
+Size of array: 100
+Number of Threads/Procs: 5
+Average Time 1491
+Min: 435
+Max: 3019
+Std. Dev: 727
+
+Size of array: 100
+Number of Threads/Procs: 3
+Average Time 1471
+Min: 534
+Max: 1873
+Std. Dev: 228
+
+Size of array: 100
+Number of Threads/Procs: 3
+Average Time 922
+Min: 318
+Max: 1702
+Std. Dev: 498
+
+Size of array: 100
+Number of Threads/Procs: 3
+Average Time 493
+Min: 137
+Max: 676
+Std. Dev: 107
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 787
+Min: 298
+Max: 1291
+Std. Dev: 273
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 860
+Min: 367
+Max: 1317
+Std. Dev: 249
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 788
+Min: 342
+Max: 1148
+Std. Dev: 191
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 860
+Min: 376
+Max: 1300
+Std. Dev: 184
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 807
+Min: 334
+Max: 1278
+Std. Dev: 237
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 290
+Min: 233
+Max: 453
+Std. Dev: 33
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 800
+Min: 454
+Max: 961
+Std. Dev: 129
+
+Size of array: 10
+Number of Threads/Procs: 2
+Average Time 804
+Min: 298
+Max: 1335
+Std. Dev: 276
+
