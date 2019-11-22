@@ -1,4 +1,145 @@
+<<<<<<< HEAD
 Average Time 1365
 Min: 90
 Max: 5475
 Std. Dev: 1232
+=======
+Size of array: 100
+Average Time 256
+Min: 85
+Max: 620
+Std. Dev: 208
+
+Size of array: 500
+Average Time 773
+Min: 457
+Max: 1307
+Std. Dev: 258
+
+Size of array: 1000
+Average Time 872
+Min: 120
+Max: 2488
+Std. Dev: 602
+
+Size of array: 2000
+Average Time 925
+Min: 91
+Max: 4797
+Std. Dev: 878
+
+Size of array: 2500
+Average Time 1248
+Min: 84
+Max: 5432
+Std. Dev: 1232
+
+Size of array: 3000
+Average Time 1325
+Min: 84
+Max: 6870
+Std. Dev: 1501
+
+Size of array: 4000
+Average Time 1505
+Min: 81
+Max: 8416
+Std. Dev: 1822
+
+Size of array: 5000
+Average Time 1074
+Min: 87
+Max: 3183
+Std. Dev: 617
+
+Size of array: 6000
+Average Time 2183
+Min: 89
+Max: 10698
+Std. Dev: 2129
+
+Size of array: 7000
+Average Time 1496
+Min: 188
+Max: 3204
+Std. Dev: 812
+
+Size of array: 8000
+Average Time 3324
+Min: 90
+Max: 19355
+Std. Dev: 3654
+
+Size of array: 9000
+Average Time 5723
+Min: 232
+Max: 12413
+Std. Dev: 3319
+
+Size of array: 10000
+Average Time 4056
+Min: 90
+Max: 27335
+Std. Dev: 4660
+
+Size of array: 11000
+Average Time 3565
+Min: 87
+Max: 24763
+Std. Dev: 4377
+
+Size of array: 12000
+Average Time 9683
+Min: 203
+Max: 31701
+Std. Dev: 9019
+
+Size of array: 13000
+Average Time 5957
+Min: 88
+Max: 32717
+Std. Dev: 7114
+
+Size of array: 14000
+Average Time 11443
+Min: 218
+Max: 37969
+Std. Dev: 11079
+
+Size of array: 15000
+Average Time 15698
+Min: 220
+Max: 41576
+Std. Dev: 12850
+
+Size of array: 16000
+Average Time 19353
+Min: 425
+Max: 43472
+Std. Dev: 13144
+
+Size of array: 17000
+Average Time 16530
+Min: 554
+Max: 47445
+Std. Dev: 14376
+
+Size of array: 18000
+Average Time 4326
+Min: 80
+Max: 9146
+Std. Dev: 2635
+
+Size of array: 19000
+Average Time 5791
+Min: 88
+Max: 47884
+Std. Dev: 5325
+
+Size of array: 20000
+Average Time 19505
+Min: 576
+Max: 57663
+Std. Dev: 16272
+
+>>>>>>> a03d483dde4ce1b639382e087e5ec5cb0eef6aa8
