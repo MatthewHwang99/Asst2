@@ -13,3 +13,4 @@ thread: searchtest.c multitest_thread.c multitest.h
 clean:
 	rm -rf searchtest
 	rm -rf multitest.o
+	rm -rf resulttest.txt
