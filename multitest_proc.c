@@ -60,15 +60,18 @@ int search(int *arr, int size, int target, int numProc){
     }
      */
     int j;
+    int temp;
     for(j = 0; j < numProc; j++){
       wait(&result);
       
       if(WEXITSTATUS(result) != 255){
 	//Found the target
 	//printf("Found the target %d at index %d of iteration %d\n", target, WEXITSTATUS(result), i);
-	return ((i * (size/numProc)) + WEXITSTATUS(result));
+	//return ((i * (size/numProc)) + WEXITSTATUS(result));
+	temp = ((i * (size/numProc)) + WEXITSTATUS(result));
       }
     }
+    return temp;
     /*
     if(WEXITSTATUS(result) != 255){
       //Found the target
