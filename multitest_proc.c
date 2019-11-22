@@ -7,6 +7,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+int info = 0;
+
 int linearSearch(int* arr, int size, int target){
   int j;
   for(j = 0; j < size; j++){
@@ -17,22 +19,40 @@ int linearSearch(int* arr, int size, int target){
   return -1;
 }
 
-int search(int *arr, int size, int target){
+int search(int *arr, int size, int target, int numProc){
   //size refers to the size of the initial array
-  int i, result, numofProc = 1, leftover;
+  /*int i, result, numofProc = 1, leftover;
   while(size/numofProc > 250){
     numofProc++;
   }
-  leftover = size - (numofProc * (size/numofProc));
-
-  for(i = 0; i < numofProc; i++){
+  leftover = size - (numofProc * (size/numofProc));*/
+  
+  int i, result;
+  
+  int partitionSize = size/numProc;
+  if(partitionSize>250){
+  	printf("Error: Partition size is greater than 250. Need more processes.\n");
+  	exit(0);
+  }
+  
+  int leftover = 0;
+  if(size%numProc!=0){
+  	leftover = size%numProc;
+  }
+  
+  if(info == 0){
+  	printf("Breaking the array into partitions of %d, using %d processes.\n", partitionSize, numProc);
+	info = 1;
+	}
+	
+  for(i = 0; i < numProc; i++){
     if(fork() == 0){
       //child process; search a portion of the array
-      if((numofProc - i) == 1 && leftover > 0){
-	exit(linearSearch(&arr[(size/numofProc) * i], leftover, target));
+      if((numProc - i) == 1 && leftover > 0){
+		exit(linearSearch(&arr[(size/numProc) * i], leftover, target));
       }
       //actual search function, returns the index; -1 if not found
-      exit(linearSearch(&arr[(size/numofProc) * i], (size/numofProc), target));
+     	exit(linearSearch(&arr[(size/numProc) * i], (size/numProc), target));
       //It will never return a value past 255 because of the 250 element array cap
     }/*else{
       //Don't have parent wait for each child, have the above loop run n times and then have another loop after having the parent wait n times for exits
@@ -40,13 +60,13 @@ int search(int *arr, int size, int target){
     }
      */
     int j;
-    for(j = 0; j < numofProc; j++){
+    for(j = 0; j < numProc; j++){
       wait(&result);
       
       if(WEXITSTATUS(result) != 255){
 	//Found the target
 	//printf("Found the target %d at index %d of iteration %d\n", target, WEXITSTATUS(result), i);
-	return ((i * (size/numofProc)) + WEXITSTATUS(result));
+	return ((i * (size/numProc)) + WEXITSTATUS(result));
       }
     }
     /*

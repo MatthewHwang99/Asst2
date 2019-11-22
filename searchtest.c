@@ -20,11 +20,13 @@ void rescramble(int prevIndex, int* arr, int size){
 }
 
 int main(int argc, char** argv){
-	if(argc!=2){
-		printf("Error: Please input array size.\n");
+	if(argc!=3){
+		printf("Error: Please an input array size followed by the number of threads/processes.\n");
+		return 0;
 	}
 	
   int size = atoi(argv[1]); //supposed to test different ranges of sizes along with different step sizes
+  int num = atoi(argv[2]); //number of threads/processes
   int* arr = (int*)malloc(size*sizeof(int));
   int target = 25;
   srand(time(0));
@@ -44,21 +46,24 @@ int main(int argc, char** argv){
   
   struct timeval start, end;
   unsigned long time = 0;
-  //unsigned long time2 = 0;
+
   int numRuns = 100;
   unsigned long min = 0, max = 0;
   unsigned long sum = 0;
+  
   FILE *fp = fopen("resulttest.txt", "w");
+  
   unsigned long timearr[numRuns];
 
   for(int i = 1; i<=numRuns; i++){
     gettimeofday(&start, 0);
-    int targetFound = (int)search(arr, size, target);
+    int targetFound = (int)search(arr, size, target, num);
     //printf("Target %d found at index %d\n", target, targetFound);
-    //fprintf(fp, "Target %d found at index %d\n", target, targetFound);
+    //fprintf(fp, "Target %d found at index %d\n", target, targetFound);  
     gettimeofday(&end, 0);
     time = (end.tv_sec - start.tv_sec)*1000000.0 + end.tv_usec - start.tv_usec;
     timearr[(i-1)] = time;
+    
     /*Calculate min and max*/
     if(min == 0 && max == 0){
       min = time;
@@ -74,7 +79,9 @@ int main(int argc, char** argv){
     //fprintf(fp,"Size of array: %d Time it took: %lu\n", size, time);
     rescramble(targetFound, arr, size);
   } 
+  
   unsigned long avgTime = sum/numRuns;
+  
   /**Calculate Std. Dev**/
   unsigned long runningsum = 0;
   for(int i = 0; i < numRuns; i++){

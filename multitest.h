@@ -3,7 +3,7 @@
 #ifndef _multitest_h
 #define _multitest_h
 
-int search(int*, int, int);
+int search(int*, int, int, int);
 
 
 #include<stdio.h>
